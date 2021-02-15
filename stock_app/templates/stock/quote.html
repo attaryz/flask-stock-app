@@ -1,0 +1,17 @@
+{% extends "base_layout.html" %}
+{% block title %}{{ticker}} Stock Quote{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-sm">
+        <h1 class="mb-3">{{ticker | upper}}</h1>
+    <hr />
+        <h2>Price: ${{stock_price}}</h2>
+    </div>
+    <div class="col">
+        {% include 'shared/portfolio.html' %}
+    </div>
+    <div class="col">
+        <a href="{{ url_for('stock.financials', ticker=ticker) }} " class="navbar-brand">Financial Report</a>
+    </div>
+</div>
+{% endblock %}

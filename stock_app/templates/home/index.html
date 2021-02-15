@@ -1,0 +1,12 @@
+{% extends "base_layout.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<div class="row">
+<div class="col-sm">
+    <h1>Welcome to StockApp</h1>
+    <p>View Stock Prices</p>
+</div>
+    <div class="col">{% include 'shared/portfolio.html' %}</div>
+</div>
+{% endblock %}
