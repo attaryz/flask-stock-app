@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0 "stock_app:create_app('prod')"
+web: gunicorn "stock_app:create_app('prod')"
